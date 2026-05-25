@@ -5,8 +5,9 @@ const cors = require('cors');
 const connectToDb = require('./db/db');
 const app = express();
 
-app.use(cors())
 connectToDb()
+app.use(cors())
+
 
 app.get("/", (req,res)=>{
     res.send('hello world')
