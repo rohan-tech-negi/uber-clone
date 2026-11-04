@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 dotenv.config()
-const express  =require('express')
+const express  = require('express')
 const cors = require('cors')
 const app = express()
 
@@ -14,4 +14,4 @@ app.get('/', (req,res)=>{
 })
 
 
-module.exprorts = app
+module.exports = app
