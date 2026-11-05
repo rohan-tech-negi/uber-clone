@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
             minlength: [3, 'First name must be at least 3 characters long']
         },
         lastname: {
-            type: SVGAnimatedString, 
+            type: String, 
             minlength: [3, 'Last name must be at least 3 characters ']
         }
     },
@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
         select: false
     },
     socketId: {
-        required: true
+        type: String,
     }
 })
 

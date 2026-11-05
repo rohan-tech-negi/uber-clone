@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended:true}))
 app.get('/', (req,res)=>{
     res.send('Hello World')
 })
-app.get("/users", userRoutes)
+app.use("/users", userRoutes)
 
 
 
