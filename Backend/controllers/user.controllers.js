@@ -1,4 +1,6 @@
 const userModel = require('../models/user.models')
 
 
-module.exports.registerUser = 
+module.exports.registerUser = async(req,res, next) => {
+    
+}
