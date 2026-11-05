@@ -1,6 +1,3 @@
-const userModel = require('../models/user.models')
+const userModel = require("../models/user.models");
 
-
-module.exports.registerUser = async(req,res, next) => {
-    
-}
+module.exports.registerUser = async (req, res, next) => {};
