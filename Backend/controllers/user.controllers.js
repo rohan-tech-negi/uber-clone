@@ -22,3 +22,5 @@ module.exports.registerUser = async (req, res, next) => {
 
     res.status(201).json({token, user})
 };
+
+module.exports.loginUser = 
