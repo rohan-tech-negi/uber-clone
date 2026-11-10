@@ -16,5 +16,7 @@ router.post('/login', [
 ],
 userController.loginUser)
 
+router.get('/profile', userController.getUserProile)
+
 
 module.exports = router
