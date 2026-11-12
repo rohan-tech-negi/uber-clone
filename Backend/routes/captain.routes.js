@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const {body} = require("express-validator")
+const captainController = require("../controllers/captain.controllers")
 
 router.post('/register', [
     
@@ -25,7 +26,7 @@ router.post('/register', [
       .isIn(['car', 'motorcycle', 'auto'])
       .withMessage("Invalid entry"),
   
-], userController.registerUser)
+], captainController.registerUser)
 
 
 module.exports = router
