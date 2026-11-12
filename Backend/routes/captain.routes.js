@@ -25,7 +25,7 @@ router.post('/register', [
       .isIn(['car', 'motorcycle', 'auto'])
       .withMessage("Invalid entry"),
   
-])
+], userController.registerUser)
 
 
 module.exports = router
