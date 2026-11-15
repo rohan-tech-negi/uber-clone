@@ -25,3 +25,5 @@ module.exports.authUser = async (req, res, next) => {
     return res.status(401).json({ message: "Unauthorized access" });
   }
 };
+
+module.exports.authCaptain
