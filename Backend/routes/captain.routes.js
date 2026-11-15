@@ -28,5 +28,9 @@ router.post('/register', [
   
 ], captainController.registerCaptain)
 
+router.post('login', [
+  
+])
+
 
 module.exports = router
