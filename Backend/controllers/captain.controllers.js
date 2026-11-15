@@ -1,3 +1,4 @@
+const blacklisttokenModel = require("../models/blacklisttoken.model");
 const captainModel = require("../models/captain.model");
 
 const captainService = require("../services/captain.service");
@@ -67,5 +68,11 @@ module.exports.getCaptainProfile = async(req,res,next) => {
 }
 
 module.exports.logoutCaptain = async(req,res,next) => {
-  
+  const token = req.cookies.token || req.headers.authorization?.split(' ')[1]
+
+  await blacklisttokenModel.create({token})
+
+  res.clearCooki('token')
+
+  res.status(200).json({message: 'Logout successfully'})
 }
