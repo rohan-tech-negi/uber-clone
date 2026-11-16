@@ -3,16 +3,17 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <div className='h-screen w-full bg-red-400'>
-          <div className='bg-white'>
-            <h2>
+      <div className='bg-cover bg-center bg-[url(https://images.unsplash.com/photo-1530652101053-8c0db4fbb5de?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D)] h-screen pt-8  flex justify-between flex-col w-full bg-red-400'>
+        <img className='w-16 ml-8' src="https://imgs.search.brave.com/uPKMhcbhl2u1icfxcJ-CQfmbZYLIeZYzz6sYgrOEATQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvNC9VYmVy/LUxvZ28tUE5HLUZy/ZWUtSW1hZ2UtdGh1/bWIud2VicA" alt="" />
+          <div className='bg-white pb-7 py-4 px-4'>
+            <h2 className='text-3xl font-bold'>
               Get Started with Uber
             </h2>
-            <button>Continue</button>
+            <button className='w-full bg-black text-white py-3 wounded mt-5'>Continue</button>
           </div>
       </div>
     </div>
   )
 }
 
-export default Home
+export default Home 
