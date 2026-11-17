@@ -4,9 +4,14 @@ import {Link} from "react-router-dom"
 const UserLogin = () => {
   const [email , setEmail] = useState(" ")
   const [password , setPassword] = useState(" ")
+  const [userData, setUserData] = useState({})
 
   const submitHandler = (e) =>{
     e.preventDefault()
+    setUserData({
+      email: email,
+      password: password
+    })
     setEmail('')
     setPassword('')
     
