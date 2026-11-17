@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
             <h2 className='text-3xl font-bold'>
               Get Started with Uber
             </h2>
-            <button className='w-full bg-black text-white py-3 wounded mt-5'>Continue</button>
+            <Link to='/login' className='flex items-center justify-center w-full bg-black text-white py-3 wounded mt-5'>Continue</Link>
           </div>
       </div>
     </div>
