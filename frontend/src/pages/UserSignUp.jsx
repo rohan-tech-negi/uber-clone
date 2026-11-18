@@ -3,20 +3,7 @@ import { useState } from "react"
 import {Link} from "react-router-dom"
 
 const UserSignUp = () => {
-  const [email , setEmail] = useState("")
-  const [password , setPassword] = useState("")
-  const [userData, setUserData] = useState({})
 
-  const submitHandler = (e) =>{
-    e.preventDefault()
-    setUserData({
-      email: email,
-      password: password
-    })
-    setEmail('')
-    setPassword('')
-    
-  }
   return (
       <div className="p-7 h-screen flex flex-col justify-between">
        <div>
@@ -31,24 +18,24 @@ const UserSignUp = () => {
         }} placeholder="firstname" className="bg-[#eeeeee] w-1/2  rounded px-4 py-2 border  text-base placeholder:text-base"/>
          <input type= "text" required value={email} onChange={(e)=>{
             setEmail(e.target.value)
-        }} placeholder="lastname" className="bg-[#eeeeee]  w-1/2 rounded px-4 py-2 border text-base placeholder:text-base"/>
+        }} placeholder="lastname" className="bg-[#eeeeee]  w-1/2 rounded px-4 py-2 border text-base placeholder:text-sm"/>
         </div>
         
         <h3 className="text-base font-medium mb-2">What's your email</h3>
         <input type= "email" required value={email} onChange={(e)=>{
             setEmail(e.target.value)
-        }} placeholder="email@example.com" className="bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-lg placeholder:text-base"/>
+        }} placeholder="email@example.com" className="bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-base placeholder:text-base"/>
         <h3 className="text-base font-medium mb-2">Enter Password</h3>
         <input type="password" required value={password} onChange={(e)=>{
             setPassword(e.target.value)
-        }} placeholder="password" className="bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg placeholder:text-base"/>
-        <button className="bg-[#111] mb-7 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Login</button>
+        }} placeholder="password" className="bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-base placeholder:text-sm"/>
+        <button className="bg-[#111] mb-7 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-sm">Login</button>
         
       </form>
-      <p className="text-center">New here? <Link to="/signup" className="text-blue-600">Create new Account</Link></p>
+      <p className="text-center">Already have a account? <Link to="/login" className="text-blue-600">Login here</Link></p>
        </div>
        <div>
-        <Link to="/captain-login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as Captain</Link>
+        <p className='text-[6px] leading-tight'>Consent</p>
        </div>
     </div>
   )
