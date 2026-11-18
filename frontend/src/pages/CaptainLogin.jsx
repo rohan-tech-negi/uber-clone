@@ -5,13 +5,13 @@ import {Link} from "react-router-dom"
 const CaptainLogin = () => {
    const [email , setEmail] = useState(" ")
   const [password , setPassword] = useState(" ")
-  const [userData, setUserData] = useState({})
+  const [captainData, setCaptainData] = useState('')
 
   const submitHandler = (e) =>{
     e.preventDefault()
-    setUserData({
+    setCaptainData({
       email: email,
-      password: password
+      password: 
     })
     setEmail('')
     setPassword('')
@@ -20,7 +20,7 @@ const CaptainLogin = () => {
   return (
      <div className="p-7 h-screen flex flex-col justify-between">
        <div>
-        <img className='w-16 ml-10' src="https://imgs.search.brave.com/LEN4L2sGxxOs3uS5JVcLLAmVzFeQgbVrSFw6n9u4YPs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGVzaWdueW91cndh/eS5uZXQvYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyNS8x/MS9VYmVyX0xvZ29f/QmxhY2tfUkdCLmpw/Zw" alt="" />
+        <img className='w-16 ml-10' src="https://media.designrush.com/inspiration_images/651560/conversions/1200x600wa-mobile.jpg" alt="" />
       <form onSubmit={(e) => {
         submitHandler(e)
       }}>
@@ -36,10 +36,10 @@ const CaptainLogin = () => {
         <button className="bg-[#111] mb-7 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Login</button>
         
       </form>
-      <p className="text-center">New here? <Link to="/signup" className="text-blue-600">Create new Account</Link></p>
+      <p className="text-center">Join a fleet? <Link to="/signup" className="text-blue-600">Register as a Captain</Link></p>
        </div>
        <div>
-        <Link to="/captain-login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as Captain</Link>
+        <Link to="/login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as Captain</Link>
        </div>
     </div>
   )

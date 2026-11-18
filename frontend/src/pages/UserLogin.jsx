@@ -38,7 +38,7 @@ const UserLogin = () => {
       <p className="text-center">New here? <Link to="/signup" className="text-blue-600">Create new Account</Link></p>
        </div>
        <div>
-        <Link to="/captain-login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as Captain</Link>
+        <Link to="/captain-login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as User</Link>
        </div>
     </div>
   )
