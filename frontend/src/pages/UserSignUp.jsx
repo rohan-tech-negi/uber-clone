@@ -24,12 +24,21 @@ const UserSignUp = () => {
       <form onSubmit={(e) => {
         submitHandler(e)
       }}>
+        <h3 className='text-lg font-medium mb-2'>What's your name</h3>
+        <div className='flex gap-4 mb-5'>
+          <input type= "text" required value={email} onChange={(e)=>{
+            setEmail(e.target.value)
+        }} placeholder="firstname" className="bg-[#eeeeee] w-1/2  rounded px-4 py-2 border  text-base placeholder:text-base"/>
+         <input type= "text" required value={email} onChange={(e)=>{
+            setEmail(e.target.value)
+        }} placeholder="lastname" className="bg-[#eeeeee]  w-1/2 rounded px-4 py-2 border text-base placeholder:text-base"/>
+        </div>
         
-        <h3 className="text-lg font-medium mb-2">What's your email</h3>
+        <h3 className="text-base font-medium mb-2">What's your email</h3>
         <input type= "email" required value={email} onChange={(e)=>{
             setEmail(e.target.value)
-        }} placeholder="email@example.com" className="bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg placeholder:text-base"/>
-        <h3 className="text-lg font-medium mb-2">Enter Password</h3>
+        }} placeholder="email@example.com" className="bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-lg placeholder:text-base"/>
+        <h3 className="text-base font-medium mb-2">Enter Password</h3>
         <input type="password" required value={password} onChange={(e)=>{
             setPassword(e.target.value)
         }} placeholder="password" className="bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg placeholder:text-base"/>
