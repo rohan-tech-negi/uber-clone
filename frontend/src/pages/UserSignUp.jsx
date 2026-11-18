@@ -3,6 +3,39 @@ import { useState } from "react"
 import {Link} from "react-router-dom"
 
 const UserSignUp = () => {
+    const [ email, setEmail ] = useState('')
+  const [ password, setPassword ] = useState('')
+  const [ firstName, setFirstName ] = useState('')
+  const [ lastName, setLastName ] = useState('')
+  const [ userData, setUserData ] = useState({})
+
+   const submitHandler = async (e) => {
+    e.preventDefault()
+    const newUser = {
+      fullname: {
+        firstname: firstName,
+        lastname: lastName
+      },
+      email: email,
+      password: password
+    }
+
+    // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser)
+
+    if (response.status === 201) {
+      const data = response.data
+      setUser(data.user)
+      localStorage.setItem('token', data.token)
+      navigate('/home')
+    }
+
+
+    setEmail('')
+    setFirstName('')
+    setLastName('')
+    setPassword('')
+
+  }
 
   return (
       <div className="p-7 h-screen flex flex-col justify-between">
