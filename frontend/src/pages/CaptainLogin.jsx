@@ -3,15 +3,15 @@ import { useState } from "react"
 import {Link} from "react-router-dom"
 
 const CaptainLogin = () => {
-   const [email , setEmail] = useState(" ")
-  const [password , setPassword] = useState(" ")
+   const [email , setEmail] = useState("")
+  const [password , setPassword] = useState("")
   const [captainData, setCaptainData] = useState('')
 
   const submitHandler = (e) =>{
     e.preventDefault()
     setCaptainData({
       email: email,
-      password: 
+      password 
     })
     setEmail('')
     setPassword('')
@@ -36,10 +36,10 @@ const CaptainLogin = () => {
         <button className="bg-[#111] mb-7 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Login</button>
         
       </form>
-      <p className="text-center">Join a fleet? <Link to="/signup" className="text-blue-600">Register as a Captain</Link></p>
+      <p className="text-center">Join a fleet? <Link to="/captain-signup" className="text-blue-600">Register as a Captain</Link></p>
        </div>
        <div>
-        <Link to="/login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as Captain</Link>
+        <Link to="/login" className="bg-[#111] flex items-center justify-center mb-5 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-base">Sign in as User</Link>
        </div>
     </div>
   )
