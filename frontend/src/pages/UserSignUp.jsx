@@ -11,29 +11,7 @@ const UserSignUp = () => {
 
    const submitHandler = async (e) => {
     e.preventDefault()
-    const newUser = {
-      fullname: {
-        firstname: firstName,
-        lastname: lastName
-      },
-      email: email,
-      password: password
-    }
-
-    // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser)
-
-    if (response.status === 201) {
-      const data = response.data
-      setUser(data.user)
-      localStorage.setItem('token', data.token)
-      navigate('/home')
-    }
-
-
-    setEmail('')
-    setFirstName('')
-    setLastName('')
-    setPassword('')
+  
 
   }
 
@@ -46,22 +24,16 @@ const UserSignUp = () => {
       }}>
         <h3 className='text-lg font-medium mb-2'>What's your name</h3>
         <div className='flex gap-4 mb-5'>
-          <input type= "text" required value={email} onChange={(e)=>{
+          <input  type= "text" required  onChange={(e)=>{
             setEmail(e.target.value)
-        }} placeholder="firstname" className="bg-[#eeeeee] w-1/2  rounded px-4 py-2 border  text-base placeholder:text-base"/>
-         <input type= "text" required value={email} onChange={(e)=>{
-            setEmail(e.target.value)
-        }} placeholder="lastname" className="bg-[#eeeeee]  w-1/2 rounded px-4 py-2 border text-base placeholder:text-sm"/>
+        }} placeholder="firstname" value={firstName} onChange={(e) => {setFirstName(e.target.value)}} className="bg-[#eeeeee] w-1/2  rounded px-4 py-2 border  text-base placeholder:text-base"/>
+         <input type= "text"  required  placeholder="lastname" value={lastName} onChange={(e) => {setLastName(e.target.value)}} className="bg-[#eeeeee]  w-1/2 rounded px-4 py-2 border text-base placeholder:text-sm"/>
         </div>
         
         <h3 className="text-base font-medium mb-2">What's your email</h3>
-        <input type= "email" required value={email} onChange={(e)=>{
-            setEmail(e.target.value)
-        }} placeholder="email@example.com" className="bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-base placeholder:text-base"/>
+        <input type= "email" required value={email} onChange={(e) => {setEmail(e.target.value)}} placeholder="email@example.com" className="bg-[#eeeeee] mb-5 rounded px-4 py-2 border w-full text-base placeholder:text-base"/>
         <h3 className="text-base font-medium mb-2">Enter Password</h3>
-        <input type="password" required value={password} onChange={(e)=>{
-            setPassword(e.target.value)
-        }} placeholder="password" className="bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-base placeholder:text-sm"/>
+        <input type="password" value={password} onChange={(e) => {setPassword(e.target.value)}}  placeholder="password" className="bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-base placeholder:text-sm"/>
         <button className="bg-[#111] mb-7 rounded px-4 py-2 text-lg w-full text-white font-semibold placeholder:text-sm">Login</button>
         
       </form>
