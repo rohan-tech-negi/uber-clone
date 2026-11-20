@@ -9,6 +9,7 @@ const CaptainSignup = () => {
   const [ password, setPassword ] = useState('')
   const [ firstName, setFirstName ] = useState('')
   const [ lastName, setLastName ] = useState('')
+  const [ userData, setUserData ] = useState({})
 
   const [ vehicleColor, setVehicleColor ] = useState('')
   const [ vehiclePlate, setVehiclePlate ] = useState('')
@@ -17,20 +18,14 @@ const CaptainSignup = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    // const captainData = {
-    //   fullname: {
-    //     firstname: firstName,
-    //     lastname: lastName
-    //   },
-    //   email: email,
-    //   password: password,
-    //   vehicle: {
-    //     color: vehicleColor,
-    //     plate: vehiclePlate,
-    //     capacity: vehicleCapacity,
-    //     vehicleType: vehicleType
-    //   }
-    // }
+     setUserData({
+      fullName:{
+        firstName: firstName,
+        lastName: lastName
+      },
+      email: email,
+      password: password
+    })
 
     // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/register`, captainData)
 
