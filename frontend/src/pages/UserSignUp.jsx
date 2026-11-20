@@ -11,6 +11,14 @@ const UserSignUp = () => {
 
    const submitHandler = async (e) => {
     e.preventDefault()
+    setUserData({
+      username:{
+        firstName: firstName,
+        lastName: lastName
+      },
+      email: email,
+      password: password
+    })
     setEmail('')
     setFirstName('')
     setLastName('')
